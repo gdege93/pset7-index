@@ -110,7 +110,7 @@
 													.data(agriculturedata)
 													.enter()
 													.append("text")
-													.attr("x",  d =>  d[1]* widthMultiplier + marginLeft+ gap +60)
+													.attr("x",  d =>  d[1]* widthMultiplier + marginLeft)
 											                .attr("y", (d, i) =>  i * (barHeight + gap) + marginTop + barHeight/1 + 16)
 
 													.attr("text-anchor", "end")
