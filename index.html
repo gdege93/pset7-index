@@ -96,28 +96,28 @@
 													.data(agriculturedata)
 													.enter()
 													.append("text")
-														.attr("x", marginLeft - gap)
-									          .attr("y", (d, i) =>  i * (barHeight + gap) + marginTop + barHeight/1 + 16)
-														.attr("text-anchor", "end")
-														.attr("font-size", 15)
-														.attr("font-weight", 300)
-														.attr("fill", "black")
-						             	.text(d => d[0]);
+												        .attr("x", marginLeft - gap)
+									                                .attr("y", (d, i) =>  i * (barHeight + gap) + marginTop + barHeight/1 + 16)
+												        .attr("text-anchor", "end")
+												        .attr("font-size", 15)
+													.attr("font-weight", 300)
+													.attr("fill", "black")
+						             	                                        .text(d => d[0]);
 
-														svg.append("g")
-															.attr("class", "h6")
-														.selectAll("text")
-															.data(agriculturedata)
-															.enter()
-															.append("text")
-																	.attr("x",  (d, i) =>  i + 210 )
-											          .attr("y", (d, i) =>  i * (barHeight + gap) + marginTop + barHeight/1 + 16)
+												svg.append("g")
+													.attr("class", "h6")
+													.selectAll("text")
+													.data(agriculturedata)
+													.enter()
+													.append("text")
+													.attr("x",  d =>  d[1]*widthMultiplier + marginLeft +gap )
+											                .attr("y", (d, i) =>  i * (barHeight + gap) + marginTop + barHeight/1 + 16)
 
-																.attr("text-anchor", "end")
-																.attr("font-size", 15)
-																.attr("font-weight", 500)
-																.attr("fill", "black")
-																.text(d => d[1] + "%");
+													.attr("text-anchor", "end")
+													.attr("font-size", 15)
+													.attr("font-weight", 500)
+													.attr("fill", "black")
+													.text(d => d[1] + "%");
 
 
 
